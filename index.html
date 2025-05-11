@@ -89,9 +89,13 @@
         <label>k) A program that prints three lines of output must contain three printf statements.
             <select><option></option><option>True</option><option>False</option></select>
         </label>
+        <button onclick="checkPage1()" style="margin-top: 20px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 6px;">Check</button>
+<button onclick="showPage2()" style="margin-top: 20px; padding: 10px 20px; background-color: #2196F3; color: white; border: none; border-radius: 6px;">Next</button>
+<div id="result-page1" style="margin-top: 20px;"></div>
     </div>
-
-    <div class="question" id="q2_3" style="display: none;">
+        
+<div id="page2" style="display: none;">
+    <div class="question" id="q2_3">
         <h2>Self-Review Exercise 2.3</h2>
         <label>a) Define the variable number to be of type int and initialize it to 0:
             <input type="text" id="a" style="width: 100%;">
@@ -122,6 +126,7 @@
 <button onclick="check23()" style="background-color:#2196F3; color:white;">Check</button>
         <div id="result-23" style="margin-top: 20px;"></div>
     </div>
+    </div>
 
     
 
@@ -149,8 +154,46 @@
                     feedback += `<p style="color:red;">✘ ${key}) Expected: <code>${answers[key]}</code></p>`;
                 }
             }
-            document.getElementById("result-23").innerHTML = `You got ${score}/${total} correct.<br>` + feedback;
+            const percent = (score / total) * 100;
+            
+feedback = `<p><strong>You got ${score}/${total} (${percent.toFixed(1)}%) correct.</strong></p>` + feedback;
+if (percent > 69) {
+    feedback += `<p style="background-color: #4CAF50; color: white; padding: 12px; border-radius: 8px; font-size: 18px;">
+    🎉 <strong>Congratulations!</strong> Great job! 🌟</p>`;
+} else {
+    feedback += `<p style="background-color: #f44336; color: white; padding: 12px; border-radius: 8px; font-size: 18px;">
+    😔 <strong>Try again!</strong> You can do it! 💪</p>`;
+}
+document.getElementById("result-23").innerHTML = feedback;
         }
+        function checkPage1() {
+    const correctAnswers = [
+        "main", "{", "}", ";", "printf", "newline", "scanf", "%d", "destructive", "non-destructive", "if",
+        "False", "False", "True", "True", "True", "False", "True", "False", "True", "False"
+    ];
+    const selects = document.querySelectorAll("#page1 select");
+    let score = 0;
+    selects.forEach((select, index) => {
+        const userAnswer = select.value.trim();
+        if (userAnswer === correctAnswers[index]) {
+            score++;
+            select.style.backgroundColor = "#d0f0c0";
+        } else {
+            select.style.backgroundColor = "#f8d7da";
+        }
+    });
+    const total = correctAnswers.length;
+    const percent = (score / total) * 100;
+    let feedback = `<p><strong>You got ${score}/${total} (${percent.toFixed(1)}%) correct.</strong></p>`;
+    if (percent > 69) {
+    feedback += `<p style="background-color: #4CAF50; color: white; padding: 12px; border-radius: 8px; font-size: 18px;">
+    🎉 <strong>Congratulations!</strong> Great job! 🌟</p>`;
+} else {
+    feedback += `<p style="background-color: #f44336; color: white; padding: 12px; border-radius: 8px; font-size: 18px;">
+     <strong>Try again!</strong> You can do it! 💪</p>`;
+}
+    document.getElementById("result-page1").innerHTML = feedback;
+}
     </script>
 
     <script>
