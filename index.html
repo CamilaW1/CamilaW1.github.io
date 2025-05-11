@@ -3,132 +3,169 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Self-Review Exercise 2.3</title>
+    <title>C Programming Self-Review Quiz</title>
     <style>
-        .correct-answer {
-            background-color: #d0f0c0 !important;
-        }
-        .incorrect-answer {
-            background-color: #f8d7da !important;
-        }
-        .score-box {
-            background-color: #d4edda;
-            color: #155724;
-            padding: 12px;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        #check-btn {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 24px;
-            font-size: 18px;
-        }
-    
-        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; }
-        .question { background-color: #fff; padding: 20px; border-radius: 8px; border-left: 5px solid #4CAF50; box-shadow: 0 0 10px rgba(0,0,0,0.05); margin-bottom: 20px; }
-        label { font-weight: bold; display: block; margin: 15px 0 5px; }
-        input[type="text"] { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; }
-        button { margin-top: 15px; margin-right: 10px; padding: 10px 20px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; }
-        #check-btn { background-color: #4CAF50; color: white; }
-        #reset-btn { background-color: #ff9800; color: white; }
-        #result { margin-top: 20px; }
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f2f2f2; }
+        h2 { color: #333; }
+        .question { margin-bottom: 20px; background-color: #fff; padding: 15px; border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        label { display: block; margin-bottom: 8px; }
+        button { padding: 10px 20px; font-size: 18px; border: none; border-radius: 8px; cursor: pointer; }
+        #submit-btn { background-color: #4CAF50; color: white; }
+        #reset-btn { background-color: #ff9800; color: white; margin-left: 10px; }
     </style>
 </head>
 <body>
-    <h2>Self-Review Exercise 2.1</h2>
-    <p><strong>Fill in the blanks in each of the following.</strong></p>
-    <h2>Self-Review Exercise 2.2</h2>
-    <p><strong>State whether each of the following is true or false. If false, explain why.</strong></p>
+    <div id="page1">
     
-    <h2>Self-Review Exercise 2.3</h2>
-<p><strong>Write a single C statement to accomplish each of the following:</strong></p>
-    <p>Write a single C statement to accomplish each of the following:</p>
-
-    <div class="question">
-        <label>a) Define the variable number to be of type int and initialize it to 0.</label>
-        <input type="text" id="a">
-
-        <label>b) Prompt the user to enter an integer. End your prompting message with a colon (:) followed by a space and leave the cursor positioned after the space.</label>
-        <input type="text" id="b">
-
-        <label>c) Read an integer from the keyboard and store the value in integer variable a.</label>
-        <input type="text" id="c">
-
-        <label>d) If number is not equal to 7, display "number is not equal to 7."</label>
-        <input type="text" id="d">
-
-        <label>e) Display "This is a C program." on one line.</label>
-        <input type="text" id="e">
-
-        <label>f) Display "This is a C program." on two lines so the first line ends with C.</label>
-        <input type="text" id="f">
-
-        <label>g) Display "This is a C program." with each word on a separate line.</label>
-        <input type="text" id="g">
-
-        <label>h) Display "This is a C program." with the words separated by tabs.</label>
-        <input type="text" id="h">
-
-        <button id="check-btn" onclick="check23()">Check</button>
-        <button id="reset-btn" onclick="reset23()">Try Again</button>
-
-        <div id="result"></div>
+    <h1>Self-Review Exercises</h1>
+    <div class="question" id="q2_1">
+        <h2>Self-Review Exercise 2.1</h2>
+        <label>a) Every C program begins execution at the function 
+            <select><option></option><option>main</option><option>scanf</option><option>printf</option></select>
+        </label>
+        <label>b) Every function’s body begins with 
+            <select><option></option><option>{</option><option>(</option></select> and ends with 
+            <select><option></option><option>}</option><option>)</option></select>
+        </label>
+        <label>c) Every statement ends with a(n) 
+            <select><option></option><option>;</option><option>}</option></select>
+        </label>
+        <label>d) The 
+            <select><option></option><option>printf</option><option>scanf</option></select> standard library function displays information on the screen.
+        </label>
+        <label>e) The escape sequence \n represents the 
+            <select><option></option><option>newline</option><option>tab</option></select> character.
+        </label>
+        <label>f) The 
+            <select><option></option><option>scanf</option><option>printf</option></select> standard library function obtains data from the keyboard.
+        </label>
+        <label>g) The conversion specification 
+            <select><option></option><option>%d</option><option>%s</option></select> in a printf or scanf format control string indicates that an integer will be output or input, respectively.
+        </label>
+        <label>h) Whenever a new value is placed in a memory location, that value overrides the previous value at that location. This process is said to be 
+            <select><option></option><option>destructive</option><option>non-destructive</option></select>.
+        </label>
+        <label>i) When a value is read from a memory location, the value in that location is preserved; this process is said to be 
+            <select><option></option><option>non-destructive</option><option>destructive</option></select>.
+        </label>
+        <label>j) The 
+            <select><option></option><option>if</option><option>for</option></select> statement is used to make decisions.
+        </label>
     </div>
+
+    <div class="question" id="q2_2">
+        <h2>Self-Review Exercise 2.2</h2>
+        <label>a) Function printf always begins printing at the beginning of a new line.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>b) Comments cause the computer to display the text after // on the screen when the program is executed.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>c) The escape sequence \n in a printf format control string positions the output cursor to the beginning of the next line.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>d) All variables must be defined before they’re used.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>e) All variables must be given a type when they’re defined.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>f) C considers the variables number and NuMbEr to be identical.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>g) Definitions can appear anywhere in the body of a function.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>h) All arguments following the format control string in a printf function must be preceded by an ampersand (&).
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>i) The remainder operator (%) can be used only with integer operands.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>j) The arithmetic operators *, /, %, + and - all have the same precedence.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>k) A program that prints three lines of output must contain three printf statements.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+    </div>
+
+    <div class="question" id="q2_3" style="display: none;">
+        <h2>Self-Review Exercise 2.3</h2>
+        <label>a) Define the variable number to be of type int and initialize it to 0:
+            <input type="text" id="a" style="width: 100%;">
+        </label>
+        <label>b) Prompt the user to enter an integer. End your prompting message with a colon (:) followed by a space and leave the cursor positioned after the space:
+            <input type="text" id="b" style="width: 100%;">
+        </label>
+        
+        <label>c) Read an integer from the keyboard and store it in variable number:
+            <input type="text" id="c" style="width: 100%;">
+        </label>
+        <label>d) If number is not equal to 7, print "The variable number is not equal to 7":
+            <input type="text" id="d" style="width: 100%;">
+        </label>
+        <label>e) Print "This is a C program" on one line:
+            <input type="text" id="e" style="width: 100%;">
+        </label>
+        <label>f) Print "This is a C program" on two lines:
+            <input type="text" id="f" style="width: 100%;">
+        </label>
+        <label>g) Print "This is a C program" on one line using two printf statements:
+            <input type="text" id="g" style="width: 100%;">
+        </label>
+        <label>h) Read two integers from the keyboard and store them in variables x and y:
+            <input type="text" id="h" style="width: 100%;">
+        </label>
+
+<button onclick="check23()" style="background-color:#2196F3; color:white;">Check</button>
+        <div id="result-23" style="margin-top: 20px;"></div>
+    </div>
+
+    
 
     <script>
         function check23() {
             const answers = {
                 a: "int number = 0;",
                 b: 'printf("Enter an integer: ");',
-                c: 'scanf("%d", &a);',
-                d: 'if(number != 7) printf("number is not equal to 7.");',
-                e: 'printf("This is a C program.\n");',
-                f: 'printf("This is a C\nprogram.\n");',
-                g: 'printf("This\nis\na\nC\nprogram.\n");',
-                h: 'printf("This\tis\ta\tC\tprogram.\n");'
+                c: 'scanf("%d", &number);',
+                d: 'if(number != 7) printf("The variable number is not equal to 7\n");',
+                e: 'printf("This is a C program\n");',
+                f: 'printf("This is a C\nprogram\n");',
+                g: 'printf("This is a "); printf("C program\n");',
+                h: 'scanf("%d%d", &x, &y);'
             };
-
             let score = 0;
             let total = Object.keys(answers).length;
             let feedback = '';
-
             for (let key in answers) {
-                const userInput = document.getElementById(key).value.trim();
-                const correct = answers[key];
-                const inputBox = document.getElementById(key);
-                if (userInput === correct) {
+                const input = document.getElementById(key).value.trim();
+                if (input === answers[key]) {
                     score++;
-                    feedback += `<p style="color:green;">✔ ${key}) Correct</p>`; inputBox.className = "correct-answer";
-                    
+                    feedback += `<p style="color:green;">✔ ${key}) Correct</p>`;
                 } else {
-                    feedback += `<p style="color:red;">✘ ${key}) Expected: <code>${correct}</code></p>`; inputBox.className = "incorrect-answer";
-                    
+                    feedback += `<p style="color:red;">✘ ${key}) Expected: <code>${answers[key]}</code></p>`;
                 }
             }
-
-            const percent = (score / total) * 100;
-            feedback += `<div class="score-box">You got ${score}/${total} (${percent.toFixed(1)}%) correct.</div>`;
-            if (percent > 69) {
-                feedback += `<p style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 8px;">🎉 Congratulations! 🎉</p>`;
-                feedback += `<p style="font-size: 18px; color: #2e7d32;"><strong>👏 Well done! You clearly understand this material.</strong></p>`;
-                feedback += `<p style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 8px;">🎉 Congratulations! 🎉</p>`;
-            }
-
-            document.getElementById("result").innerHTML = feedback;
+            document.getElementById("result-23").innerHTML = `You got ${score}/${total} correct.<br>` + feedback;
         }
+    </script>
 
-        function reset23() {
-            const inputs = document.querySelectorAll("input[type='text']");
-            inputs.forEach(input => {
-                input.value = "";
-                input.style.backgroundColor = "";
-            });
-            document.getElementById("result").innerHTML = "";
+    <script>
+        function showPage2() {
+            document.getElementById("page1").style.display = "none";
+            document.getElementById("page2").style.display = "block";
+            window.scrollTo(0, 0);
+        }
+        function showPage1() {
+            document.getElementById("page1").style.display = "block";
+            document.getElementById("page2").style.display = "none";
+            window.scrollTo(0, 0);
         }
     </script>
 </body>
+
 </html>
+
